@@ -4,8 +4,6 @@ function mostrarAlmuerzos(){
     document.getElementById("aperitivos").style.display='none';
     document.getElementById("postres").style.display='none';
     document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
     document.getElementById("info").style.display='none';
 }
 function mostrarDesayunos(){
@@ -14,8 +12,6 @@ function mostrarDesayunos(){
     document.getElementById("aperitivos").style.display='none';
     document.getElementById("postres").style.display='none';
     document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
     document.getElementById("info").style.display='none';
 }
 function mostrarAperitivos(){
@@ -24,8 +20,6 @@ function mostrarAperitivos(){
     document.getElementById("aperitivos").style.display='flex';
     document.getElementById("postres").style.display='none';
     document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
     document.getElementById("info").style.display='none';
 }
 function mostrarPostres(){
@@ -34,8 +28,6 @@ function mostrarPostres(){
     document.getElementById("aperitivos").style.display='none';
     document.getElementById("postres").style.display='flex';
     document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
     document.getElementById("info").style.display='none';
 }
 function mostrarBebidas(){
@@ -44,28 +36,6 @@ function mostrarBebidas(){
     document.getElementById("aperitivos").style.display='none';
     document.getElementById("postres").style.display='none';
     document.getElementById("bebidas").style.display='flex';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
-    document.getElementById("info").style.display='none';
-}
-function mostrarClientes(){
-    document.getElementById("almuerzos").style.display='none';
-    document.getElementById("desayunos").style.display='none';
-    document.getElementById("aperitivos").style.display='none';
-    document.getElementById("postres").style.display='none';
-    document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='flex';
-    document.getElementById("pedidos").style.display='none';
-    document.getElementById("info").style.display='none';
-}
-function mostrarPedidos(){
-    document.getElementById("almuerzos").style.display='none';
-    document.getElementById("desayunos").style.display='none';
-    document.getElementById("aperitivos").style.display='none';
-    document.getElementById("postres").style.display='none';
-    document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='flex';
     document.getElementById("info").style.display='none';
 }
 function mostrarInfo(){
@@ -74,7 +44,5 @@ function mostrarInfo(){
     document.getElementById("aperitivos").style.display='none';
     document.getElementById("postres").style.display='none';
     document.getElementById("bebidas").style.display='none';
-    document.getElementById("clientes").style.display='none';
-    document.getElementById("pedidos").style.display='none';
     document.getElementById("info").style.display='flex';
 }

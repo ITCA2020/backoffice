@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <title>Starter Template · Bootstrap</title>
+    <title>Riconchita | Administración</title>
     
     <!--Template based on URL below-->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
@@ -41,10 +41,10 @@
                 </div>
             </li>
             <li class="nav-item">
-                <label class="nav-link" onclick="mostrarPedidos()">Pedidos</label>
+                <a href="pedidos.php" class="nav-link" onclick="mostrarPedidos()">Pedidos</a>
             </li>
             <li class="nav-item">
-                <label class="nav-link" onclick="mostrarClientes()">Clientes</label>
+                <a href="clientes.php" class="nav-link">Clientes</a>
             </li>
             <li class="nav-item">
                 <label class="nav-link" onclick="mostrarInfo()">Información</label>
@@ -143,7 +143,7 @@
             </form>
         </div>
         
-        
+          
         
         <!--
         *    *    *    *    *    *    *    *    *    *    *    *
@@ -198,103 +198,6 @@
                 </div>
             </form>
         </div>
-        
-        
-        
-        <!--
-        *    *    *    *    *    *    *    *    *    *    *    *
-                           REGISTRO DE PEDIDOS
-        *    *    *    *    *    *    *    *    *    *    *    *
-        -->
-       
-        <div class="text-center mt-5 pt-5 contenedor_principal" id="pedidos">
-            <h1>Registro de Pedidos</h1>
-            <div class="" id="msj_pedidos"></div><hr>
-            
-            <div class="form-inline">
-                <input class="form-control" type="search" placeholder="Buscar.." aria-label="Buscar">
-                <button class="btn btn-primary" type="buttom" id="btnBuscar" onclick="">Buscar</button>
-            </div>
-            
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th></th>
-                        <th>PEDIDO</th>
-                        <th>FECHA</th>
-                        <th>HORA</th>
-                        <th>CLIENTE</th>
-                        <th>MONTO</th>
-                        <th>ESTADO</th>
-                        <th>acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="radio" name="pedido"></td>
-                        <td>00000</td>
-                        <td>28 de dic de 2020</td>
-                        <td>11:30 AM</td>
-                        <td>Eliu Salazar</td>
-                        <td>$ 25.00</td>
-                        <td>recibido</td>
-                        <td>
-                           <div class="btn-group">
-                                <button type="button" class="btn btn-success">Modificar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        
-        
-        <!--
-        *    *    *    *    *    *    *    *    *    *    *    *
-                           REGISTRO DE CLIENTES
-        *    *    *    *    *    *    *    *    *    *    *    *
-        -->
-       
-        <div class="text-center mt-5 pt-5 contenedor_principal" id="clientes">
-            <h1>Clientes Registrados</h1>
-            <div class="" id="msj_clientes"></div><hr>
-            
-            <div class="form-inline">
-                <input class="form-control" type="search" placeholder="Buscar.." aria-label="Buscar">
-                <button class="btn btn-primary" type="buttom" id="btnBuscar" onclick="">Buscar</button>
-            </div>
-            
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th></th>
-                        <th>id</th>
-                        <th>cliente</th>
-                        <th>dirección</th>
-                        <th>teléfono</th>
-                        <th>acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="radio" name="cliente"></td>
-                        <td>00000</td>
-                        <td class="alinear_izq">Edenilson Salas</td>
-                        <td class="alinear_izq">Col. Santa Leonor, Pasaje 8 Casa 9, Santa Ana</td>
-                        <td>2456-4658</td>
-                        <td>
-                           <div class="btn-group">
-                                <button type="button" class="btn btn-success">Modificar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
         
         
         <!--

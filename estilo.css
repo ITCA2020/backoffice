@@ -1,6 +1,6 @@
-#desayunos, #aperitivos, #postres, #bebidas, #pedidos, #clientes, #info { 
+#desayunos, #aperitivos, #postres, #bebidas, #info {  
     display: none;
-}
+} 
 #msj_almuerzos, #msj_desayunos, #msj_aperitivos, #msj_postres, #msj_bebidas, #msj_pedidos {
     display: none;
 }
