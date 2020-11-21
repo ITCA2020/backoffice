@@ -1,0 +1,66 @@
+#desayunos, #aperitivos, #postres, #bebidas, #pedidos, #clientes, #info { 
+    display: none;
+}
+#msj_almuerzos, #msj_desayunos, #msj_aperitivos, #msj_postres, #msj_bebidas, #msj_pedidos {
+    display: none;
+}
+
+.form-control {
+    margin: 10px;
+    width: 500px;
+}
+
+.contenedor_principal { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.custom-file {
+    width: 500px;
+}
+
+.btn-primary {
+    width: 500px;
+}
+
+.respuesta {
+    margin: 10px;
+    color: white;
+    background-color: green;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#msj_pedidos {
+    width: 100%;
+}
+
+.table {
+    text-transform: uppercase;
+}
+.alinear_izq {
+}
+
+#barraBuscar {
+    display: inline-block;
+}
+
+#btnBuscar {
+    width: 100px;
+    display: inline-block;
+}
+
+.form-inline {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#msj_clientes {
+    width: 100%;
+}
