@@ -258,7 +258,7 @@ $db = mysqli_select_db($conexion,$basededatos);
                     <input type="text" placeholder="ID" class="form-control" readonly>
                     <input type="text" placeholder="Nombre de bebida" class="form-control" name="nombre_bebidas">
                     <input type="number" placeholder="Precio" class="form-control" name="precio_bebidas">
-                    <input type="text" placeholder="Descripción" class="form-control" name="descricion_bebidas">
+                    <input type="text" placeholder="Descripción" class="form-control" name="descripcion_bebidas">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFileLang" lang="es" required name="img_bebidas">
                         <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label> 
