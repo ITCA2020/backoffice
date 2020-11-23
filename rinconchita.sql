@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2020 a las 06:21:28
+-- Tiempo de generación: 23-11-2020 a las 21:12:15
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.33
 
@@ -102,7 +102,8 @@ CREATE TABLE `pedidos` (
   `user_dir` varchar(100) DEFAULT NULL,
   `producto` varchar(50) DEFAULT NULL,
   `cant` varchar(50) DEFAULT NULL,
-  `estado` varchar(50) DEFAULT NULL
+  `estado` varchar(50) DEFAULT NULL,
+  `monto` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
