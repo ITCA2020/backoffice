@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$usuario = "root";
+$contraseña = "";
+$servidor = "localhost";
+$basededatos="rinconchita";
+$conexion = mysqli_connect($servidor,$usuario,""); 
+$db = mysqli_select_db($conexion,$basededatos);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,6 +97,36 @@
                             </div>
                         </td>
                     </tr>
+                    <?php
+
+                    $consultapedidos = 'SELECT * from pedidos ';
+                    $resultadohisto = mysqli_query($conexion,$consultapedidos) ;
+
+                    while ($filas=mysqli_fetch_array($resultadohisto)) {
+                       
+                       echo "<tr>";
+                       echo "<td>"; echo $filas['id_pedido']; echo "</td>";
+                       echo "<td>"; echo $filas['fecha']; echo "</td>";
+                       echo "<td>"; echo $filas['hora']; echo "</td>";
+                       echo "<td>"; echo $filas['id_user']; echo "</td>";
+                       echo "<td>"; echo "$filas['pedidos']"; echo "</td>";
+                       echo "<td>"; echo $filas['estado']; echo "</td>";
+                       echo "<td>                   
+                            <div class='btn-group'>
+                                   <a href = 'modificar_pedidos.php?id_pedido=".$filas['id_pedido']."'>
+                                   <button type='button' class='btn btn-success' name='mod' >Modificar</button>
+                                   </a>
+                                   <a href = 'eliminar_pedidos.php?id_pedido=".$filas['id_pedido']."'>
+                                <button type='button' class='btn btn-danger' name='eliminar'>Eliminar</button>
+                               </a>
+                            </div>
+
+                       </td>";
+                       echo "</tr>";
+                    }
+
+                    ?>
+
                 </tbody>
             </table>
         </div>

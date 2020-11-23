@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$usuario = "root";
+$contraseña = "";
+$servidor = "localhost";
+$basededatos="rinconchita";
+$conexion = mysqli_connect($servidor,$usuario,""); 
+$db = mysqli_select_db($conexion,$basededatos);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +69,7 @@
                 <input class="form-control" type="search" placeholder="Buscar.." aria-label="Buscar">
                 <button class="btn btn-primary" type="buttom" id="btnBuscar" onclick="">Buscar</button>
             </div>
-            
+            <form method="post">
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -82,13 +93,55 @@
                             </div>
                         </td>
                     </tr>
+                    <?php
+                    $consultaclientes = 'SELECT * from usuarios ';
+                    $resultadoclientes = mysqli_query($conexion,$consultaclientes) ;
+
+
+                    while ($filas=mysqli_fetch_array($resultadoclientes)) {
+                       
+                     
+                       echo "<tr>";
+                       echo "<td class='alinear_izq'>". $filas['id_user']. "</td>";
+                       echo "<td class='alinear_izq'>". $filas['user_nom']. "</td>";
+                       echo "<td>". $filas['user_dir']. "</td>";
+                       echo "<td>". $filas['user_tel']."</td>";
+                       echo "<td>
+                     
+
+                            <div class='btn-group'>
+                                   <a href = 'modificar_clientes.php?id_user=".$filas['id_user']."'>
+                                   <button type='button' class='btn btn-success' name='mod' >Modificar</button>
+                                   </a>
+                                   <a href = 'eliminar_clientes.php?id_user=".$filas['id_user']."'>
+                                <button type='button' class='btn btn-danger' name='eliminar'>Eliminar</button>
+                               </a>
+                            </div>
+
+                       </td>";
+                      
+                       echo "</tr>";
+
+                    }
+
+                    ?>
                 </tbody>
             </table>
+            </form>
         </div>
-        
+
+
+  
+   
+             
+              
+                  
+              
+       
+
 
     </main><!-- /.container -->
-
+   
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -96,6 +149,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 </body>
 </html>
